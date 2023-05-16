@@ -1,0 +1,104 @@
+[
+    {
+        "user_id":1,
+        "user_name":"doaa ahmed",
+        "user_age":18,
+        "user_address":"egypt",
+        "user_phone":"01025982542",
+        "user_email":"doaa@gmail.com",
+        "user_password":"A!123456"
+
+    },
+    {
+        "user_id":2,
+        "user_name":"ahmed mahmoud",
+        "user_age":21,
+        "user_address":"egypt",
+        "user_phone":"01256970352",
+        "user_email":"ahmed@gmail.com",
+        "user_password":"gV#1f666"
+
+    },
+    {
+        "user_id":3,
+        "user_name":"mustafa hassan",
+        "user_age":23,
+        "user_address":"egypt",
+        "user_phone":"01152222354",
+        "user_email":"mustafa@mail.com",
+        "user_password":"S5*m4466"
+
+    },
+    {
+        "user_id":4,
+        "user_name":"safaa ali",
+        "user_age":12,
+        "user_address":"egypt",
+        "user_phone":"01125480214",
+        "user_email":"safaa@gmail.com",
+        "user_password":"sN44_646"
+
+    }, 
+       {
+        "user_id":5,
+        "user_name":"aya ahmed",
+        "user_age":19,
+        "user_address":"egypt",
+        "user_phone":"01024513601",
+        "user_email":"aya@gmail.com",
+        "user_password":"a8Ai$ig88"
+
+    },
+    {
+        "user_id":6,
+        "user_name":"ali abdel rahman",
+        "user_age":29,
+        "user_address":"egypt",
+        "user_phone":"012587201520",
+        "user_email":"aliabdelraman@gmail.com",
+        "user_password":"A122@401"
+
+    },
+    {
+        "user_id":7,
+        "user_name":"hassan amr",
+        "user_age":45,
+        "user_address":"egypt",
+        "user_phone":"011356402541",
+        "user_email":"hassan@gmail.com",
+        "user_password":"H22*128"
+
+    },
+    {
+        "user_id":8,
+        "user_name":"heba nor",
+        "user_age":32,
+        "user_address":"egypt",
+        "user_phone":"01236253152",
+        "user_email":"heba@gmail.com",
+        "user_password":"Hl384/8h"
+
+    },
+    {
+        "user_id":9,
+        "user_name":"seif naser",
+        "user_age":26,
+        "user_address":"egypt",
+        "user_phone":"01025130102",
+        "user_email":"seif@gmail.com",
+        "user_password":"Ps484j*"
+
+    },
+    {
+        "user_id":10,
+        "user_name":"han mohamed",
+        "user_age":55,
+        "user_address":"egypt",
+        "user_phone":"01255361200",
+        "user_email":"han@gmail.com",
+        "user_password":"Hn989^n"
+
+    }
+
+
+]

@@ -1,0 +1,57 @@
+<!-- link for featured products content css -->
+<link rel="stylesheet" href="/assets/category-sec.css" />
+<!-- link for product card template css -->
+<link rel="stylesheet" href="/assets/cat-card.css" />
+
+<!-- including product card template to clone it later -->
+<template id="cat-cardtemp">
+  <div class="cat-card">
+    <div class="cat-card-header">
+      <h3 id="cat_name">Nike</h3>
+    </div>
+
+    <div class="cat-card-img">
+      <img id="cat_img" src="/imgs/product1.jpg" alt="..." />
+    </div>
+
+    <div class="cat-card-footer">
+      <form action="/fullcategory.html" target="_blank">
+        <input type="text" id="catvalue" name="category" value="" hidden />
+        <input type="submit" value="view category" />
+      </form>
+    </div>
+  </div>
+</template>
+
+<!-- start actual content -->
+<div class="category_header">
+  <span>Categories</span>
+</div>
+<div class="category" id="categories-container"></div>
+
+<script>
+  // calling JSON file
+
+  var catrequest = new XMLHttpRequest();
+  catrequest.open("GET", "./assets/products.json", true);
+  catrequest.onreadystatechange = function () {
+    if (catrequest.readyState == 4 && catrequest.status == 200) {
+      var catRes = catrequest.response;
+      var catfterParse = JSON.parse(catRes);
+      console.log(catrequest);
+      for (var i = 0; i < 4; i++) {
+        var temp = document.getElementById("cat-cardtemp").content;
+        var newcontent = document.importNode(temp, true);
+        newcontent.getElementById("cat_name").textContent =
+          catfterParse[i].category;
+        newcontent.getElementById("catvalue").value = catfterParse[i].category;
+        var proimg = newcontent.getElementById("cat_img");
+        proimg.setAttribute("src", catfterParse[i].prod_image.img1);
+
+        document.getElementById("categories-container").appendChild(newcontent);
+      }
+    }
+  };
+
+  catrequest.send();
+</script>

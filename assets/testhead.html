@@ -1,0 +1,169 @@
+<nav>
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i></a>
+        <li onclick="searchslide_out()" ><a href="#"><i class="fa-solid fa-magnifying-glass"><input onfocus="searchslide_out()" onblur="searchslide_in()" id="search" type="text"></i></a>     
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <li><a href="#"><i class="fa-solid fa-trash-can"></i></a>
+     </ul>
+</nav>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+NAV ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    list-style: none;
+}
+nav ul a{
+  
+    color:black;
+}
+nav ul input{
+
+    /* border-radius: 15px;
+    height: max-content;
+    width: min-content;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0px 10px;
+    width: 200px; */
+   
+}
+input{
+    border-radius: 15px;
+    height: max-content;
+    width: min-content;
+    font-size: 18px;
+    text-align: center;
+    width: 0px;
+    border: none;
+    transition: .5s;
+    padding: 5px 0px;
+    margin: 0px 10px;
+    position: relative;
+    top: -5px;
+}
+nav i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 7px;
+    transition: .5s;
+    margin: 0px 10px;
+    
+}
+nav i:hover{
+    background-color: rgb(221, 86, 149);
+    color: aliceblue;
+    
+
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.contact_clip{
+    display: flex;
+    align-items: center;
+    background-color: rgba(129, 226, 226, 0.473);
+    border-radius: 50px;
+    width: fit-content;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.1);}
+.contact_clip img{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    padding: 5px;
+    /* margin-right: 10px; */
+
+}
+
+.contact_details{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    align-items: center;
+    width: 0px;
+    transition: .8s;
+}
+
+
+.contact_details i{
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.contact_details p{
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(24, 197, 76);
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+}
+.gallery_container{
+    margin-top: 50px;
+    box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.1);
+    border-radius: 25px;
+   padding: 10px;
+   
+}
+.gallery_container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5% 20% ;
+    width: 400px;
+   
+}
+
+.gallery_img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 5px;
+    padding: 10px;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.gallery_container img{
+    
+    width:150px;
+    height: 150px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.399);
+    transition: .7s;
+    object-fit:cover;
+    
+}
+.gallery_container img:hover{
+    /* width:250px;
+    height: 300px; */
+    transform: scale(2);
+    margin: 10%;
+    
+
+}
+</style>

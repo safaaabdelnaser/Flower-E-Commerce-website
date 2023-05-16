@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	<link rel="stylesheet" type="text/css" href="./contac_us.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<script src="//code.jquery.com/jquery-3.6.3.min.js"></script>
+
+</head>
+<body>
+	<!-- header  file refrence  -->
+	<div data-include="header"></div>
+	
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+				<input type="text" id="name" class="field" placeholder="Your Name">
+				<input type="text" id="mail" class="field" placeholder="Your Email">
+				<input type="text" id="phone" class="field" placeholder="Phone">
+				<textarea placeholder="Message" id="message" class="field"></textarea>
+				<button class="sendbtn" id="sendbtn" >Send</button>
+			</div>
+		</div>
+	</div>
+	<div data-include="footer"></div>
+
+	<script>
+        $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = '/assets/' + $(this).data('include') + '.html'
+          $(this).load(file)
+        })  
+      })
+    </script>
+    <script src="./contactus.js"></script>
+
+</body>
+</html>

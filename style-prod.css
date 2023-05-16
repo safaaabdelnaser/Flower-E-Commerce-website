@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}    
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color:#ce7777 ;
+
+}
+
+.product-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 10px; 
+    width: 100%;
+  
+}
+
+.div-img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+
+}
+#img1{
+    width:90%;
+    height: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.div-img2{
+    display: flex;
+    justify-content: center;
+}
+.div-img2 img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: .3s;
+    opacity: .8;
+}
+.div-img2 img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+.section-col{
+    margin: 20px 40px;
+   width: 500px;
+   
+}
+
+.section-col h2{
+    font-size: 35px;
+    color: #2b3a55;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+    width: 300px;
+
+} 
+
+.section-col h3{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.section-col span{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.section-col a{
+    font-size: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2b3a55;
+    color: #fff;
+    border-radius: 6px;
+
+}
+.section-col a:hover{
+    color: #2b3a55;  
+    background-color:#e99c9c; 
+}
+
+.section-col input{
+    border: 1px inset ;
+    border-radius: 6px;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    margin:10px 0px;
+    background-color:#dcd5d5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.section-col h4{
+    color: #dcd5d5;   
+    font-size: 20px;
+   
+
+}
+.section-col p{
+    color: #dcd5d5;   
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2b3a55;
+
+}
+
+
+
+/******originalcode*******/
+/* .row{
+    
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.section-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-img1{
+    display: flex;
+    justify-content: center;
+}
+.div-img1 img{
+    width: 100%;
+    height: 350px;
+    border-radius: 6px;
+    
+}
+.div-img2 {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+   
+}
+.div-img2 img{
+    border-radius: 8px;
+    width: 250px;
+    height: 180px;
+margin: 10px;    
+}
+.div-img2 :first-child{
+margin-left: 0;
+}
+/* testing */
+
+
+
+/* .section-col2 h2{
+    font-size: 35px;
+    color: #2b3a55;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+    width: 300px;
+
+} */
+/* .section-col2 h3{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+} */
+/* .section-col2 div{
+    margin-bottom: 20px;
+    color: #dcd5d5;   
+    font-size: 20px;
+} */
+/* .section-col2 input{
+    border: 1px inset ;
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color:#dcd5d5;
+    font-weight: bold;
+}
+.section-col2 span{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.section-col2 a{
+    font-size: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2b3a55;
+    color: #fff;
+    border-radius: 6px;
+
+}
+.section-col2 a:hover{
+     color: #e8c4c4;  
+     background-color:#ce7777; 
+} */
+
+
+/*responsive*/
+
+
+/* @media(max-width:767px){
+    .section-col{
+        width: 50%;
+       margin-bottom: 20px;
+    }
+}
+
+@media(max-width:574px){
+    .section-col{
+        width: 100%;
+    
+    }
+}  */

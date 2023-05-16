@@ -1,0 +1,106 @@
+<!-- link for featured products content css -->
+<link rel="stylesheet" href="./assets/featured_products.css">
+<!-- link for product card template css -->
+<link rel="stylesheet" href="./assets/product_card.css">
+
+<!-- including product card template to clone it later -->
+<template id="cardtemp">  
+<div class="card">
+
+    <div class="card-header">
+        <h3 id="pro_name">Nike</h3>
+        <p id="pro_desc">Running sneakers</p>
+        <span>Featured</span>
+    </div>
+
+    <div class="card-img" >
+        <img id="pro_img" src="/imgs/product1.jpg" alt="...">
+        <i class="bx bx-heart"></i>
+    </div>
+
+    <div class="card-details">
+        <div class="price">
+            <p>Price</p>
+            <strong id="pro_price"></strong>
+        </div>
+                
+        <strong id="catigory">Type1</strong>
+      
+     </div>
+    <div class="card-footer">
+
+          <form action="/prod-page.html" target="_blank">
+            <input type="text" id="pid" name="pid" value="" hidden >
+                <input type="submit" value="view Product" >
+        </form> 
+   </div>
+
+</div>
+</template>  
+
+<!-- start actual content -->
+<div class="featured_header">
+    <span>Featured Products</span>
+</div>
+<div class="featured" id="featured_container" >
+    
+
+
+
+</div>
+
+<script defer>
+    // calling JSON file
+    
+    var httpRequestall = new XMLHttpRequest();
+    httpRequestall.open("GET","./assets/products.json", true);
+    httpRequestall.onreadystatechange = function () {
+    if (httpRequestall.readyState == 4 && httpRequestall.status == 200)
+     {
+            var dataRes=httpRequestall.response;
+            var dataAfterParse=JSON.parse(dataRes);
+        for(var i=0; i<11;i++)
+        {
+            if(dataAfterParse[i].prod_features==true){
+          console.log(dataAfterParse[i])
+                  var temp =document.getElementById('cardtemp').content
+                    var newcontent =document.importNode(temp,true)
+                   var pid = newcontent.getElementById('pid')
+                    pid.setAttribute('value',dataAfterParse[i].prod_id);
+                    newcontent.getElementById('pro_name').textContent=dataAfterParse[i].prod_name
+                    newcontent.getElementById('pro_desc').textContent=dataAfterParse[i].prod_description
+                    newcontent.getElementById('pro_price').textContent=dataAfterParse[i].prod_price+" .EGP"
+                    newcontent.getElementById('catigory').textContent=dataAfterParse[i].category
+                    var proimg =newcontent.getElementById('pro_img')
+                    proimg.setAttribute('src',dataAfterParse[i].prod_image.img1);
+                    // newcontent.getElementById('pro_name').textContent=dataAfterParse[i].
+
+
+                document.getElementById('featured_container').appendChild(newcontent)
+
+          
+            }
+        }
+        // console.log(dataAfterParse);
+
+    }
+}
+httpRequestall.send();
+
+
+    // cloning template in a variable
+//   var temp =document.getElementById('cardtemp').content
+//     var newcontent =document.importNode(temp,true)
+//     newcontent.getElementById('pro_name').textContent=dataAfterParse[i].prod_name
+//     newcontent.getElementById('pro_desc').textContent=dataAfterParse[i].prod_description
+//     newcontent.getElementById('pro_price').textContent=dataAfterParse[i].prod_price+"EGP"
+//     newcontent.getElementById('catigory').textContent=dataAfterParse[i].category
+//     newcontent.getElementById('pro_name').setattribute('src',dataAfterParse[i].prod_image.img1)
+//     // newcontent.getElementById('pro_name').textContent=dataAfterParse[i].
+
+
+//   document.getElementById('featured_container').appendChild(newcontent)
+
+  
+  
+  </script>

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+.featured1 {
+    height: auto;
+    place-items: center;
+    background: #fafafa;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url("https://th.bing.com/th/id/OIP.uVJKCxEs1ra1HZzUpnSVVwHaEo?w=301&h=187&c=7&r=0&o=5&pid=1.7");
+    background-repeat: no-repeat;
+background-size: cover;
+    
+   
+}
+.featured_header1{
+    display: flex;
+    margin-top: 20px;
+    box-shadow: 0px 13px 15px -3px rgba(0,0,0,0.1);
+    border: 2px solid rgba(0,0,0,0.1);;
+}
+.featured_header1 span{
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    left: 190px;
+    padding: 20px;
+    color:  rgb(43, 58, 85); 
+}
+
+@media (max-width: 782px) {
+    .featured1 {
+       flex-direction: column;
+       
+    }
+    .card1 {
+        width:350px;
+    }
+    
+    #cat1  {
+    width: 90px;
+}
+  }
+.card1 {
+    position: relative;
+    width: 13%;
+    height: min-content;
+    padding: 25px;
+    background: rgb(248, 222, 222);
+    border: 2px solid #aeb5c1;
+    border-radius: 30px 70px;
+    transition: .4s;
+    margin: 50px;
+   
+}
+
+.card1:hover {
+    border-color: #3d3d85;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 12px rgba(255, 148, 148, 0.08);
+}
+
+
+
+.card1 .card-header1 p {
+    color: #100935;
+    font-size: 20px;
+    text-align: center;
+}
+.card1 .card-img1 {
+    position: relative;
+    height: 220px;
+    border-radius: 12px;
+    margin: 22px 0;
+    overflow: hidden;
+}
+
+.card1 .card-img1 img {
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+
+.card1:hover .card-img1 img {
+    transform: scale(1.06);
+}
+
+.card1 .card-img1 i {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #757d8a;
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+
+.card1 .card-footer1 #cat1 {
+    cursor: pointer;
+    width: 100%;
+    height: 46px;
+    border-radius: 12px;
+    background: #2b1f64; 
+    color: rgb(227, 192, 192);
+    font-size: 20px;
+    letter-spacing: .5px;
+    text-align: center;
+    padding-top: 12px;
+}

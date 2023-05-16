@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for embeding header -->
+    <script src="//code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <title>E-commerce website</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/4098/4098389.png"
+    />
+  </head>
+  <body>
+    <div id="top">
+      <a href="#top"
+        ><img
+          title="Back to top"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Arrow_up_font_awesome.svg/1200px-Arrow_up_font_awesome.svg.png"
+          alt="arrow up"
+          style="
+            width: 35px;
+            height: 35px;
+            position: fixed;
+            left: 91%;
+            top: 90%;
+            z-index: 1;
+            background-color: rgba(137, 43, 226, 0.49);
+            border-radius: 15px;
+            padding: 5px;
+            transition: 0.2s;
+            opacity: 0.8;
+          "
+          onmouseover="this.style.scale=1.2; this.style.opacity=1"
+          onmouseleave="this.style.scale=1; this.style.opacity=.8"
+      /></a>
+    </div>
+    <!-- this is how we include files together  -->
+    <!-- <div data-include="Filename"></div> -->
+    <!-- header  file refrence  -->
+    <div data-include="header"></div>
+
+    <!-- slider file refrence  -->
+    <div data-include="slider"></div>
+    <!-- category file refrence  -->
+    <div id="category"></div>
+    <div data-include="category-sec"></div>
+
+    <!-- testing -->
+
+    <!-- end testing -->
+
+    <!-- featured products file refrence  -->
+    <div data-include="featured_products"></div>
+
+    <!-- about file refrence  -->
+    <div id="about-sec"></div>
+    <div data-include="about"></div>
+
+    <!-- footer file refrence  -->
+    <div data-include="footer"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

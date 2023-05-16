@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style-cart.css" />
+    <script src="//code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <title>cart page</title>
+  </head>
+  <!-- header  file refrence  -->
+
+  <div data-include="header"></div>
+
+  <body onload="totalprice()">
+    <div class="wrapper">
+      <h1>shoping cart</h1>
+
+      <div class="container-shop">
+        <div class="shop" id="shop1">
+          <template id="flowertemp">
+            <div id="deletebox" class="box">
+              <img id="floimge" src="images/1-32.jpg" alt="" />
+              <div class="content">
+                <h3 id="floname">flower 1</h3>
+                <h4 id="flowprice">price:<span id="prc">&nbsp;50</span></h4>
+                <p>
+                  quantity :
+                  <input
+                    id="qunt"
+                    type="number"
+                    min="1"
+                    value="1"
+                    onchange="totalprice()"
+                  />
+                </p>
+                <p class="btn-area">
+                  <span id="remove" class="btn2" onclick="reomveitem()"
+                    ><i class="fa-solid fa-trash"></i>remove</span
+                  >
+                </p>
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="right-bar">
+          <p><span>subtotal</span><span id="total">120$</span></p>
+          <hr />
+          <p><span>tax</span><span>20$</span></p>
+          <hr />
+          <p><span>shipping</span><span>120$</span></p>
+          <hr />
+          <p><span>total</span><span id="total-price">220</span></p>
+
+          <a href="https://www.paypal.com/eg/signin"
+            ><i class="fa-solid fa-cart-arrow-down"></i>cheeck out</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/1172ac4acc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style-cart.css" />
+    <script src="/cart-page.js"></script>
+  </body>
+
+  <!-- footr file refrence  -->
+  <div data-include="footer"></div>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//code.jquery.com/jquery-3.6.3.min.js" defer></script>
+
+    <!-- link for featured products content css -->
+    <link rel="stylesheet" href="/assets/category-sec.css" />
+    <!-- link for product card template css -->
+    <link rel="stylesheet" href="/assets/cat-card.css" />
+    `
+    <script src="/fullcategory.js" defer></script>
+    <title>Category</title>
+  </head>
+  <body>
+    <!-- including product card template to clone it later -->
+    <template id="cardtemp">
+      <div class="cat-card">
+        <div class="cat-card-header">
+          <h3 id="pro_name">Nike</h3>
+          <p id="pro_desc">Running sneakers</p>
+          <span>Featured</span>
+        </div>
+
+        <div class="cat-card-img">
+          <img id="pro_img" src="/imgs/product1.jpg" alt="..." />
+          <i class="bx bx-heart"></i>
+        </div>
+
+        <div class="cat-card-details">
+          <div class="price">
+            <p>Price</p>
+            <strong id="pro_price"></strong>
+          </div>
+
+          <strong id="catigory">Type1</strong>
+        </div>
+        <div class="cat-card-footer">
+          <form action="/prod-page.html" target="_blank">
+            <input type="text" id="pid" name="pid" value="" hidden />
+            <input type="submit" value="view Product" />
+          </form>
+        </div>
+      </div>
+    </template>
+
+    <!-- header  file refrence  -->
+    <div data-include="header"></div>
+    <!-- start actual content -->
+    <div class="category_header">
+      <span>Category Products</span>
+    </div>
+    <div class="category" id="category-products"></div>
+    <!-- slider file refrence  -->
+    <div data-include="footer"></div>
+  </body>
+  <script src="/assets/searchbar.js" defer></script>
+</html>

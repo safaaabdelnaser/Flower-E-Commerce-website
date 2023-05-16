@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="/assets/showproduct.css">
+<style> .is-hidden { display: none; }</style>
+<template id="cardtemp2">  
+    <div class="card2">
+    
+        <div class="card-header2">
+            <h4 id="pro_name2">Nike</h4>
+            <p id="prod_rating2">Running sneakers</p>
+        </div>
+        <div class="card-img2" >
+            <img id="pro_img2" src="/imgs/product1.jpg" alt="...">
+            <i class="bx bx-heart2"></i>
+        </div>
+    
+        <div class="card-details2">
+            <div class="price2">
+                <p>Price</p>
+                
+                <strong id="pro_price2"></strong>
+            </div>
+                    
+            <strong id="catigory2">Type1</strong>
+          
+         </div>
+         <div class="card-footer2">
+
+            <form action="/prod-page.html" target="_blank" >
+              <input type="text" id="pid2" name="pid2" value="" hidden >
+               <input type="submit" value="view Product" id="btn1">
+          </form> 
+     </div>
+    
+    </div>
+    </template>  
+    
+    <!-- start actual content -->
+    <div class="featured_header2">
+        <span>Products</span>
+    </div>
+    <div class="featured2" id="featured_container2" >
+    </div>
+    
+    <script defer>
+    //     const urlParams = new URLSearchParams(window.location.search);
+    //     const category = urlParams.get('category');
+    //     var httpRequestall = new XMLHttpRequest();
+    //     httpRequestall.open("GET","./products.json", true);
+    //     httpRequestall.onreadystatechange = function () 
+    //     {
+    //     if (httpRequestall.readyState == 4 && httpRequestall.status == 200)
+    //     {      
+    //             var dataRes=httpRequestall.response;
+    //             var dataAfterParse=JSON.parse(dataRes);
+    //         for(var i=0; i<dataAfterParse.length;i++)
+    //         {
+    //             if(dataAfterParse[i].category=== category)
+    //            {
+    //             console.log(dataAfterParse[i].category)
+    //             console.log(category)
+    //             document.getElementById("mydiv").innerHTML="flower id: "+dataAfterParse[i].prod_id + "<br><br> flower name: "+dataAfterParse[i].prod_name+"<br><br> category:"+dataAfterParse[i].category+"<br><br> flower description: "+dataAfterParse[i].prod_description +"<br><br> flower price:"+dataAfterParse[i].prod_price+"<br><br> quantity:"+dataAfterParse[i].prod_quantity;
+    //            }
+    //         }
+    //     }
+    // }
+
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+var httpRequestall = new XMLHttpRequest();
+    httpRequestall.open("GET","/assets/products.json", true);
+    httpRequestall.onreadystatechange = function () {
+    if (httpRequestall.readyState == 4 && httpRequestall.status == 200)
+     {
+            var dataRes=httpRequestall.response;
+            var dataAfterParse=JSON.parse(dataRes);
+        for(var i=0; i<dataAfterParse.length;i++)
+        {
+            if(dataAfterParse[i].category==category){
+          console.log(dataAfterParse[i])
+                  var temp =document.getElementById('cardtemp2').content
+                    var newcontent =document.importNode(temp,true);
+                    newcontent.getElementById('pid2').textContent=dataAfterParse[i].prod_id;
+                    newcontent.getElementById('pro_name2').textContent=dataAfterParse[i].prod_name
+                    newcontent.getElementById('prod_rating2').textContent=dataAfterParse[i].prod_rating+"/5 Rating"
+                    newcontent.getElementById('pro_price2').textContent=dataAfterParse[i].prod_price+" .EGP"
+                    newcontent.getElementById('catigory2').textContent=dataAfterParse[i].category
+                    var proimg =newcontent.getElementById('pro_img2')
+                    proimg.setAttribute('src',dataAfterParse[i].prod_image.img1);
+                   
+                    // newcontent.getElementById('pro_name').textContent=dataAfterParse[i].
+
+
+                document.getElementById('featured_container2').appendChild(newcontent)
+
+          
+            }
+        }
+        // console.log(dataAfterParse);
+
+    }
+}
+httpRequestall.send();
+        
+// JavaScript code
+
+
+    </script>
+<script src="/assets/searchbar.js"></script>
+    </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/signin.css" />
+    <!-- for embeding external page elements -->
+    <script src="//code.jquery.com/jquery-3.6.3.min.js"></script>
+  </head>
+  <body>
+    <div data-include="header"></div>
+
+    <form
+      class="form"
+      id="myForm1"
+      name="form"
+      action="/index.html"
+      method="get"
+    >
+      <div class="formcontainer">
+        <h1>Sign in</h1>
+        <p>Welcome To Our Website</p>
+        <hr />
+        <br />
+        <label>Enter Your Email</label><br />
+        <input
+          onblur="confemail2()"
+          type="text"
+          id="mail"
+          name="email"
+          placeholder="Enter Email"
+        />
+        <br />
+        <label>Enter Your Password</label><br />
+        <input
+          onblur="conf2()"
+          id="pass"
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+        />
+        <br />
+
+        <button type="submit" onclick="validation1()">Sign In</button>
+      </div>
+    </form>
+    <div data-include="footer"></div>
+    <script>
+      $(function () {
+        var includes = $("[data-include]");
+        $.each(includes, function () {
+          var file = "/assets/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+    <script src="signin.js"></script>
+  </body>
+</html>

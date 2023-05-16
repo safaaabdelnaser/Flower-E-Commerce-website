@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+        
+    <!-- embedding header -->
+ 
+    <div data-include="header"></div>
+
+    <section>
+        <div class="product-content-container">
+            <!-- <div class="row "> -->
+                    <div class="section-col">
+                        <div  class="div-img1">
+                            <img id="img1" src="images/1-32.jpg" alt="">
+                        </div>
+                        <div class="div-img2">
+                            <img class="img" src="images/1-32.jpg" alt="">
+                            <img class="img" src="images/WhatsApp Image 2022-11-17 at 11.02.04 PM.jpeg" alt="">
+                            <img class="img" src="images/EUSPA Logo Contest Proposal.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="section-col">
+                        <h2 id="prodname">single product demo</h2>
+                        <p id="prod-desc" class="Description">Add a Helium balloon with your order, available with many occasions. </p>
+                        <h3>Product price:</h3>  
+                        <h4 id="prod-price"> 49.00 EGP</h4>
+                        <h3>Product Category:</h3>  
+                        <h4 id="prod-category"> lavander</h4>
+                        <h3>order total:</h3>  
+                        <h4 id="order-total"> 49.00 EGP</h4> 
+                        <input type="number" min="1" value="1" id="number" /> <span>&nbsp quantity</span>
+                        
+                        <a href="#" onclick="addtocart()"> add to cart</a>
+                        
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+        <!-- embedding footer -->
+    <div data-include="footer"></div>
+        
+        <link rel="stylesheet" href="style-prod.css">
+        <script>
+            $(function () {
+                var includes = $('[data-include]')
+                $.each(includes, function () {
+                    var file = '/assets/' + $(this).data('include') + '.html'
+                    $(this).load(file)
+                })  
+            })
+
+
+          
+        
+            
+        </script>
+        <script src="prod.js"></script>
+</body>
+</html>
